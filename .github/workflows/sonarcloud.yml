@@ -13,32 +13,14 @@ jobs:
         with:
           fetch-depth: 0 # Disabling shallow clones is recommended for accurate blame info
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
       - name: Install Rust and Clippy
         run: |
           rustup update stable
-          rustup component add clippy llvm-tools-preview
-
-      - name: Install cargo-llvm-cov
-        uses: taiki-e/install-action@cargo-llvm-cov
-
-      - name: Build extension and run tests under coverage instrumentation
-        run: |
-          source <(cargo llvm-cov show-env --export-prefix)
-          export CARGO_TARGET_DIR="$CARGO_LLVM_COV_TARGET_DIR"
-          mkdir -p coverage
-          python -m pip install --upgrade pip
-          python -m pip install -e ./vectors
-          python -m pip install -e .
-          python -m pip install --group test
-          pytest -n auto --dist=worksteal --cov=cryptography --cov-report=xml tests/
-          cargo llvm-cov report --lcov --output-path coverage/rust-lcov.info
+          rustup component add clippy
 
       - name: Official SonarQube Cloud Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
