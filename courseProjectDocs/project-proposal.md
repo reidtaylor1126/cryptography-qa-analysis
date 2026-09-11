@@ -12,8 +12,10 @@ Software quality has been a focus of the project since its v0.1 release in 2014,
 We plan to collect the following standard maintainability metrics:
 - LOC per file
 - Comment density
-- Cyclomatic complexity
+- Cyclomatic complexity  
+    source directory 5941
 - Number of unit tests
 - Unit test coverage
+    100%
 
 Within the context of cryptography, there are a plethora of other relevant quality metrics that are difficult to measure in the same ways as the above metrics. These include, for example, ease of use, or robustness of algorithms.
