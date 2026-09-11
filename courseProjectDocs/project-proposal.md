@@ -19,7 +19,7 @@ We collected the following standard maintainability and quality metrics to estab
 
 - **Lines of Code (LOC):** 42,780 Total across 211 files (including 107 Rust files, highlighting the hybrid Python/Rust architecture).
 - **Comment Density:** 7.8% in the source directory. This reflects the proportion of documentation and inline explanations relative to the code.
-- **Cyclomatic Complexity:** 5,941 across the source directory. This indicates the number of decision points and linear paths through the code, serving as a baseline to identify areas that may be difficult to test or maintain.
+- **Cyclomatic Complexity:** 9,270 across the source directory. This indicates the number of decision points and linear paths through the code, serving as a baseline to identify areas that may be difficult to test or maintain.
 
 ### Code Quality and Security (SonarQube)
 
