@@ -31,8 +31,10 @@ jobs:
           source <(cargo llvm-cov show-env --export-prefix)
           export CARGO_TARGET_DIR="$CARGO_LLVM_COV_TARGET_DIR"
           mkdir -p coverage
+          python -m pip install --upgrade pip
           python -m pip install -e ./vectors
-          python -m pip install -e ".[test]"
+          python -m pip install -e .
+          python -m pip install --group test
           pytest -n auto --dist=worksteal --cov=cryptography --cov-report=xml tests/
           cargo llvm-cov report --lcov --output-path coverage/rust-lcov.info
 
