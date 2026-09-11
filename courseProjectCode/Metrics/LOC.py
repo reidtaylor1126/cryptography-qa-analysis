@@ -63,7 +63,9 @@ def main():
     
     total_loc = 0
     for dirpath, loc in sorted_loc_data:
-        print(f"{dirpath:<100} {loc:>10}")
+        # print(f"{dirpath:<100} {loc:>10}")
+        print(f"{dirpath}")
+        print(f"{loc}")
         total_loc += loc
         
     print("\nTotal LOC:")
