@@ -1,3 +1,5 @@
+# Project Proposal
+
 ## Overview
 
 `cryptography` is the de facto Python library for all common cryptography applications. It provides encryption through both primitives and recipes (most notably Fernet, a symmetric-key encryption specification, and Cobblestone, a version adapted for streaming), allowing encryption to be integrated in python programs easily and simply with secure default configurations, but also exposing lower-level features for developers with more specific needs. It is developed under the supervision of the Python Cryptographic Authority, which also manages projects like `bcrypt` and `pyopenssl`.
