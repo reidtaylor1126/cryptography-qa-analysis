@@ -59,7 +59,8 @@ def main():
     # Sort directories alphabetically to group neighbors together
     sorted_loc_data = sorted(loc_data.items(), key=lambda x: x[0].lower())
     
-    print(f"{'Directory':<100} {'LOC':>10}")
+    print(f"{'Directory'}")
+    print(f"{'LOC'} \n")
     
     total_loc = 0
     for dirpath, loc in sorted_loc_data:
